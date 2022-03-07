@@ -48,7 +48,6 @@
 				AA8779A5A2CAF65B489D0586 /* Pods-NaverMapTest.debug.xcconfig */,
 				8760C426B4682FBF2E0D513D /* Pods-NaverMapTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

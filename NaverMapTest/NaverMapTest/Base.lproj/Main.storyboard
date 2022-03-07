@@ -16,40 +16,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VSh-qU-Got">
-                                <rect key="frame" x="16" y="64" width="343" height="714"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CQo-Oe-pNl">
+                                <rect key="frame" x="4" y="44" width="367" height="34"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8ou-7l-pkR">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="31"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1jL-CD-dID">
-                                                <rect key="frame" x="0.0" y="0.0" width="284.66666666666669" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SU4-Js-att">
-                                                <rect key="frame" x="294.66666666666669" y="0.0" width="48.333333333333314" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="검색"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" restorationIdentifier="naverMapView" translatesAutoresizingMaskIntoConstraints="NO" id="lyo-KD-REA" customClass="NMFMapView" customModule="NaverMapTest" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="41" width="343" height="673"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ikO-FA-ht1">
+                                        <rect key="frame" x="0.0" y="0.0" width="308.66666666666669" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djn-bH-6yF">
+                                        <rect key="frame" x="318.66666666666669" y="0.0" width="48.333333333333314" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="검색"/>
+                                        <connections>
+                                            <action selector="btnSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qog-b8-VXG"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cNY-9W-Tbg" customClass="NMFMapView">
+                                <rect key="frame" x="0.0" y="86" width="375" height="692"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VSh-qU-Got" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2qg-3B-HLN"/>
-                            <constraint firstItem="VSh-qU-Got" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WdA-4l-HhJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VSh-qU-Got" secondAttribute="bottom" id="bpe-Si-6Bf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VSh-qU-Got" secondAttribute="trailing" constant="16" id="lNd-bZ-LH6"/>
+                            <constraint firstItem="cNY-9W-Tbg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1br-js-MKa"/>
+                            <constraint firstItem="CQo-Oe-pNl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="221-XA-M6Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cNY-9W-Tbg" secondAttribute="bottom" id="JV6-Pg-6re"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cNY-9W-Tbg" secondAttribute="trailing" id="KHO-Yh-Vlz"/>
+                            <constraint firstItem="CQo-Oe-pNl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="f5B-23-9Cg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CQo-Oe-pNl" secondAttribute="trailing" constant="4" id="kYX-iM-EtC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="cNY-9W-Tbg" id="G5D-Md-SJK"/>
+                        <outlet property="tfAddress" destination="ikO-FA-ht1" id="xY2-OH-7bC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
